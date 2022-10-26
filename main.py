@@ -1,8 +1,9 @@
-import sys, json
+import json
 from dotenv import load_dotenv
 load_dotenv()
 
 from helpers import create_dts_s3, is_file_exist
+from logger import logger
 
 def main():
     config_file = "./config.json"
@@ -16,13 +17,8 @@ def main():
                 dest_table=conf["destination_table"],
                 s3_uri=conf["s3_uri"]
             )
-
-            print(task.name)
     else:
-        try:
-            pass
-        except Exception as err:
-            pass
+        logger.error("File config.json is not found. Please provide it.")
 
 if __name__ == "__main__":
     main()

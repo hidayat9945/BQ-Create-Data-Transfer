@@ -44,7 +44,6 @@ def create_dts_s3(display_name: str, dest_dataset: str, dest_table: str, s3_uri:
         )
         
         logger.info("Transfer {task_name} has been created.".format(task_name=task.display_name))
-        return task
 
     except Exception as err:
         logger.error(err)

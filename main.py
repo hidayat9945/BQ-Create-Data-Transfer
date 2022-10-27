@@ -11,7 +11,7 @@ def main():
         with open(config_file) as f:
             configs = json.load(f)
         for conf in configs:
-            task = create_dts_s3(
+            create_dts_s3(
                 display_name=conf["display_name"],
                 dest_dataset=conf["destination_dataset"],
                 dest_table=conf["destination_table"],

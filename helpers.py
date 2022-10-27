@@ -32,7 +32,7 @@ def create_dts_s3(display_name: str, dest_dataset: str, dest_table: str, s3_uri:
                 "file_format": "PARQUET",
                 "write_disposition": "WRITE_APPEND"
             },
-            schedule="every 24 hours 01:00",
+            schedule="every day 01:00",
         )
 
         task = dts_client.create_transfer_config(

@@ -17,6 +17,19 @@ def is_file_exist(file_path: str):
     return False
 
 
+def list_dts():
+    # Get list of scheduled queries names
+    tasks = dts_client.list_transfer_configs(
+        parent = dts_client.common_location_path(
+            project=PROJECT_ID,
+            location=LOCATION
+        )
+    )
+    tasks = [task.display_name for task in tasks]
+
+    return tasks
+
+
 def create_dts_s3(display_name: str, dest_dataset: str, dest_table: str, s3_uri: str):
     # Create data transfer task in BigQuery Data Transfer
     try:

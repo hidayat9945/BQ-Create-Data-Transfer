@@ -49,7 +49,7 @@ There are 3 python files lie here.
 ⚠️ **DO NOT PUSH YOUR `.env` AND GCP CREDENTIAL FILES INTO REPOSITORY SINCE IT IS CREDENTIAL!!**
 
 ## How To Run The Program?
-I suggest you to use python virtual environment to separate the environment between project. You can find how to create and use it in [python documentation page](https://www.notion.so/Create-python-function-in-AWS-lambda-07d1fc4d1ab8497696c24cf927576ae3).
+I suggest you to use python virtual environment to separate the environment between project. You can find how to create and use it in [python documentation page](https://docs.python.org/3/library/venv.html).
 
 After activating virtual environment, please follow below steps.
 1. You need to install all the dependencies required. All dependencies are provided in file `requirements.txt`. To install this, you can run the command below.
